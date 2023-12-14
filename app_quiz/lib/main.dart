@@ -19,14 +19,14 @@ class HomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              FlutterLogo(size: 200,),
+              SizedBox(child: Image.asset('assets/images/icon_logo_quiz.png'), height: 350, width: 350,),
               ElevatedButton(
                 onPressed: () {
                   print('Pressioando');
                 },
                 child: Text('Jogar', style: TextStyle(fontSize: 50)),
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                  padding: EdgeInsets.fromLTRB(80, 15, 80, 15),
                 ),
                 
               ),
