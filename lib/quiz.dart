@@ -13,7 +13,7 @@ class _QuizState extends State<Quiz> {
 
     List quiz = [
     {
-      "Pergunta":"Quem descobriu o Brasil?",
+      "pergunta":"Quem descobriu o Brasil?",
       "respostas": [
         "Dom Pedro",
         "Pedro Álvares Cabral",
@@ -26,16 +26,18 @@ class _QuizState extends State<Quiz> {
   
   quiz.add(
     {
-    "Pergunta":"O Flutter é um linguagem?",
+    "pergunta":"O Flutter é uma linguagem?",
       "respostas": [
         "Uma Linguagem",
-        "Aplicativo",
-        "SDK",
-        "Notebook",
+        "Um Aplicativo",
+        "Um SDK",
+        "Um Notebook",
       ],
       "alternativa_correta":3,
     }
   );
+
+  int perguntaNumero = 2;
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -50,14 +52,16 @@ class _QuizState extends State<Quiz> {
               children: [
                 Align(
                   alignment: Alignment.topRight,
-                  child: Text('Pergunta 1 de 10', style: TextStyle(fontSize: 20))),
-                 Text('Pergunta',style: TextStyle(fontSize: 20)),
+                  child: Text('Pergunta $perguntaNumero de 10', style: TextStyle(fontSize: 20))),
+
+                 Text('Pergunta \n' + quiz[perguntaNumero -1]['pergunta'],
+                 style: TextStyle(fontSize: 20)),
         
                 ElevatedButton(
                   onPressed: () {
                     print('1');
                   },
-                  child: Text('Resposta 1', style: TextStyle(fontSize: 20)),
+                  child: Text(quiz[perguntaNumero - 1]['respostas'][0], style: TextStyle(fontSize: 20)),
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.fromLTRB(60, 12, 60, 12),
                   ),
@@ -67,7 +71,7 @@ class _QuizState extends State<Quiz> {
                   onPressed: () {
                     print('2');
                   },
-                  child: Text('Resposta 2', style: TextStyle(fontSize: 20)),
+                  child: Text(quiz[perguntaNumero - 1]['respostas'][1], style: TextStyle(fontSize: 20)),
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.fromLTRB(60, 12, 60, 12),
                   ),
@@ -77,7 +81,7 @@ class _QuizState extends State<Quiz> {
                   onPressed: () {
                     print('3');
                   },
-                  child: Text('Resposta 3', style: TextStyle(fontSize: 20)),
+                  child: Text(quiz[perguntaNumero - 1]['respostas'][2], style: TextStyle(fontSize: 20)),
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.fromLTRB(60, 12, 60, 12),
                   ),
@@ -87,7 +91,7 @@ class _QuizState extends State<Quiz> {
                   onPressed: () {
                     print('4');
                   },
-                  child: Text('Resposta 4', style: TextStyle(fontSize: 20)),
+                  child: Text(quiz[perguntaNumero - 1]['respostas'][3], style: TextStyle(fontSize: 20)),
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.fromLTRB(60, 12, 60, 12),
                   ),
