@@ -10,6 +10,33 @@ class Quiz extends StatefulWidget {
 class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
+
+    List quiz = [
+    {
+      "Pergunta":"Quem descobriu o Brasil?",
+      "respostas": [
+        "Dom Pedro",
+        "Pedro Álvares Cabral",
+        "Tiradentes",
+        "Dom Pedro II",
+      ],
+      "alternativa_correta":2,
+    }
+  ];
+  
+  quiz.add(
+    {
+    "Pergunta":"O Flutter é um linguagem?",
+      "respostas": [
+        "Uma Linguagem",
+        "Aplicativo",
+        "SDK",
+        "Notebook",
+      ],
+      "alternativa_correta":3,
+    }
+  );
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
