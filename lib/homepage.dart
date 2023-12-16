@@ -11,23 +11,26 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text('                              Quiz'),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              SizedBox(child: Image.asset('assets/images/icon_logo_quiz.png'), height: 350, width: 350,),
-              ElevatedButton(
-                onPressed: () {
-                  print('Pressioando');
-                },
-                child: Text('Jogar', style: TextStyle(fontSize: 50)),
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.fromLTRB(60, 12, 60, 12),
+        body: Padding(
+          padding: EdgeInsets.all(20),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                SizedBox(child: Image.asset('assets/images/icon_logo_quiz.png'), height: 350, width: 350,),
+                ElevatedButton(
+                  onPressed: () {
+                    print('Pressioando');
+                  },
+                  child: Text('Jogar', style: TextStyle(fontSize: 50)),
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.fromLTRB(60, 12, 60, 12),
+                  ),
+                  
                 ),
-                
-              ),
-            ],
-            
+              ],
+              
+            ),
           ),
         ),
       ),

@@ -8,6 +8,10 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
+  int perguntaNumero = 1;
+  int acertos = 0;
+  int erros = 0;
+  
   @override
   Widget build(BuildContext context) {
 
