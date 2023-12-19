@@ -21,6 +21,7 @@ class HomePage extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     print('Pressioando');
+                    Navigator.pushNamed(context, 'Quiz');
                   },
                   child: Text('Jogar', style: TextStyle(fontSize: 50)),
                   style: ElevatedButton.styleFrom(
